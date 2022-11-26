@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetupActivity">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="109dp"
+        android:text="Bildirimler"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/btn_mınus_up" />
+
+    <EditText
+        android:id="@+id/editText_low"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_plus_low"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="42dp"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/btn_mınus_low"
+        app:layout_constraintTop_toBottomOf="@+id/editText_low" />
+
+    <Button
+        android:id="@+id/btn_mınus_low"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_plus_low"
+        app:layout_constraintStart_toStartOf="@+id/editText_low" />
+
+    <EditText
+        android:id="@+id/editText_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/up_sound"
+        app:layout_constraintTop_toBottomOf="@+id/up_vib"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_mınus_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_plus_up"
+        app:layout_constraintStart_toStartOf="@+id/editText_up" />
+
+    <Button
+        android:id="@+id/btn_plus_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="42dp"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/btn_mınus_up"
+        app:layout_constraintTop_toBottomOf="@+id/editText_up" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:text="Üst Sınır Ayarı"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="9dp"
+        android:text="Bildirimler"
+        app:layout_constraintBottom_toTopOf="@+id/editText_up"
+        app:layout_constraintEnd_toStartOf="@+id/up_vib"
+        />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="3dp"
+        android:text="Alt Sınır Ayarı"
+        app:layout_constraintBottom_toTopOf="@+id/low_vib"
+        app:layout_constraintEnd_toEndOf="@+id/low_vib" />
+
+    <CheckBox
+        android:id="@+id/low_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ses"
+        app:layout_constraintBaseline_toBaselineOf="@+id/low_vib"
+        app:layout_constraintEnd_toEndOf="@+id/editText_low" />
+
+    <CheckBox
+        android:id="@+id/up_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="Ses"
+        app:layout_constraintStart_toEndOf="@+id/up_vib"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <CheckBox
+        android:id="@+id/low_vib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Titreşim"
+        app:layout_constraintBottom_toTopOf="@+id/editText_low"
+        app:layout_constraintEnd_toStartOf="@+id/low_sound" />
+
+    <CheckBox
+        android:id="@+id/up_vib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:text="Titreşim"
+        app:layout_constraintBaseline_toBaselineOf="@+id/up_sound"
+        app:layout_constraintStart_toStartOf="@+id/textView2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
